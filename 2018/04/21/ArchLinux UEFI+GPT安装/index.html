@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ArchLinux 安装，UEFI+GPT | YsBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="制作镜像 使用usbwriter  设置键盘布局 可以省略，默认为us键盘布局  查看可用的键盘布局1# ls /usr/share/kbd/keymaps/**/*.map.gz 设置键盘布局1# loadkeys us 验证启动方式 以下命令执行成功则为uefi模式启动   执行命令  1# ls /sys/firmware/efi/efivars">
+<meta name="keywords" content="archlinux,linux,安装系统,efi,分区">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArchLinux 安装，UEFI+GPT">
+<meta property="og:url" content="http://yoursite.com/2018/04/21/ArchLinux UEFI+GPT安装/index.html">
+<meta property="og:site_name" content="YsBlog">
+<meta property="og:description" content="制作镜像 使用usbwriter  设置键盘布局 可以省略，默认为us键盘布局  查看可用的键盘布局1# ls /usr/share/kbd/keymaps/**/*.map.gz 设置键盘布局1# loadkeys us 验证启动方式 以下命令执行成功则为uefi模式启动   执行命令  1# ls /sys/firmware/efi/efivars">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-27T13:01:27.515Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ArchLinux 安装，UEFI+GPT">
+<meta name="twitter:description" content="制作镜像 使用usbwriter  设置键盘布局 可以省略，默认为us键盘布局  查看可用的键盘布局1# ls /usr/share/kbd/keymaps/**/*.map.gz 设置键盘布局1# loadkeys us 验证启动方式 以下命令执行成功则为uefi模式启动   执行命令  1# ls /sys/firmware/efi/efivars">
+  
+    <link rel="alternate" href="/atom.xml" title="YsBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YsBlog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ywyself</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ArchLinux UEFI+GPT安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/21/ArchLinux UEFI+GPT安装/" class="article-date">
+  <time datetime="2018-04-21T08:24:33.000Z" itemprop="datePublished">2018-04-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ArchLinux 安装，UEFI+GPT
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h1><blockquote>
+<p>使用usbwriter</p>
+</blockquote>
+<h1 id="设置键盘布局"><a href="#设置键盘布局" class="headerlink" title="设置键盘布局"></a>设置键盘布局</h1><blockquote>
+<p>可以省略，默认为us键盘布局</p>
+</blockquote>
+<h2 id="查看可用的键盘布局"><a href="#查看可用的键盘布局" class="headerlink" title="查看可用的键盘布局"></a>查看可用的键盘布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ls /usr/share/kbd/keymaps/**/*.map.gz</span><br></pre></td></tr></table></figure>
+<h2 id="设置键盘布局-1"><a href="#设置键盘布局-1" class="headerlink" title="设置键盘布局"></a>设置键盘布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># loadkeys us</span><br></pre></td></tr></table></figure>
+<h1 id="验证启动方式"><a href="#验证启动方式" class="headerlink" title="验证启动方式"></a>验证启动方式</h1><blockquote>
+<p>以下命令执行成功则为uefi模式启动</p>
+</blockquote>
+<ul>
+<li>执行命令  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ls /sys/firmware/efi/efivars</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h1 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h1><blockquote>
+<p>最好使用有线连接，因为简单</p>
+</blockquote>
+<h2 id="测试网络是否已经连接"><a href="#测试网络是否已经连接" class="headerlink" title="测试网络是否已经连接"></a>测试网络是否已经连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ping www.baidu.com</span><br></pre></td></tr></table></figure>
+<h2 id="使用有线连接网络"><a href="#使用有线连接网络" class="headerlink" title="使用有线连接网络"></a>使用有线连接网络</h2><blockquote>
+<p>使用有线连接网络</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># dhcpcd</span><br></pre></td></tr></table></figure>
+<h1 id="设置时间同步"><a href="#设置时间同步" class="headerlink" title="设置时间同步"></a>设置时间同步</h1><blockquote>
+<p>注意用<code>date</code>看一下时间，与正确时间差了8个小时</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># timedatectl set-ntp true</span><br></pre></td></tr></table></figure>
+<h1 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h1><h2 id="使用parted对磁盘进行分区"><a href="#使用parted对磁盘进行分区" class="headerlink" title="使用parted对磁盘进行分区"></a>使用<code>parted</code>对磁盘进行分区</h2><blockquote>
+<p>目前划分的是3个分区，<code>/boot</code>，<code>/home</code>,<code>/</code></p>
+</blockquote>
+<h3 id="查看磁盘设备"><a href="#查看磁盘设备" class="headerlink" title="查看磁盘设备"></a>查看磁盘设备</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># parted -l</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以下为虚拟机上的分区，分区表格式为mbr</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Model: Virtio Block Device (virtblk)</span><br><span class="line">Disk /dev/vda: 42.9GB</span><br><span class="line">Sector size (logical/physical): 512B/512B</span><br><span class="line">Partition Table: msdos</span><br><span class="line">Disk Flags:</span><br><span class="line"></span><br><span class="line">Number Start   End     Size    Type     File system  Flags</span><br><span class="line">1      1049kB  42.9GB  42.9GB  primary  ext4         boot</span><br></pre></td></tr></table></figure>
+<h3 id="选择操作设备块"><a href="#选择操作设备块" class="headerlink" title="选择操作设备块"></a>选择操作设备块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># parted /dev/vda</span><br></pre></td></tr></table></figure>
+<h3 id="修改为GPT格式"><a href="#修改为GPT格式" class="headerlink" title="修改为GPT格式"></a>修改为<code>GPT</code>格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(parted) mklabel</span><br><span class="line">New disk label type? gpt                                                  </span><br><span class="line">Warning: Partition(s) on /dev/vda are being used.</span><br><span class="line">Ignore/Cancel? i                                                          </span><br><span class="line">Warning: The existing disk label on /dev/vda will be destroyed and all data on this disk will be lost. Do you want to continue?</span><br><span class="line">Yes/No? y</span><br></pre></td></tr></table></figure>
+<h3 id="删除已有分区"><a href="#删除已有分区" class="headerlink" title="删除已有分区"></a>删除已有分区</h3><blockquote>
+<p>使用rm 数字删除分区</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(parted) rm 1</span><br></pre></td></tr></table></figure>
+<h3 id="新建boot分区"><a href="#新建boot分区" class="headerlink" title="新建boot分区"></a>新建<code>boot</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(parted) mkpart</span><br><span class="line">Partition name?  []?</span><br><span class="line">File system type?  [ext2]? ext4</span><br><span class="line">Start? 0</span><br><span class="line">End? 512M</span><br></pre></td></tr></table></figure>
+<h3 id="新建home分区"><a href="#新建home分区" class="headerlink" title="新建home分区"></a>新建<code>home</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(parted) mkpart</span><br><span class="line">Partition name?  []? /home</span><br><span class="line">File system type?  [ext2]? ext4</span><br><span class="line">Start? 512M</span><br><span class="line">End? 10G</span><br></pre></td></tr></table></figure>
+<h3 id="新建-分区"><a href="#新建-分区" class="headerlink" title="新建/分区"></a>新建<code>/</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(parted) mkpart</span><br><span class="line">Partition name?  []? /</span><br><span class="line">File system type?  [ext2]?</span><br><span class="line">Start? 10G</span><br><span class="line">End? -1</span><br></pre></td></tr></table></figure>
+<h3 id="查看分区信息"><a href="#查看分区信息" class="headerlink" title="查看分区信息"></a>查看分区信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(parted) p</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Model: Virtio Block Device (virtblk)</span><br><span class="line">Disk /dev/vda: 42.9GB</span><br><span class="line">Sector size (logical/physical): 512B/512B</span><br><span class="line">Partition Table: gpt</span><br><span class="line">Disk Flags:</span><br><span class="line"></span><br><span class="line">Number  Start   End     Size    File system  Name   Flags</span><br><span class="line">    1      17.4kB  512MB   512MB</span><br><span class="line">    2      512MB   10.0GB  9488MB               /home</span><br><span class="line">    3      10.0GB  42.9GB  32.9GB               /</span><br></pre></td></tr></table></figure>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(parted) quit</span><br></pre></td></tr></table></figure>
+<h2 id="使用fdisk进行磁盘分区"><a href="#使用fdisk进行磁盘分区" class="headerlink" title="使用fdisk进行磁盘分区"></a>使用<code>fdisk</code>进行磁盘分区</h2><blockquote>
+<p>进行<code>fdisk</code>的命令交互操作时候不能删除输入的内容</p>
+</blockquote>
+<h3 id="选择操作设备块-1"><a href="#选择操作设备块-1" class="headerlink" title="选择操作设备块"></a>选择操作设备块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># fdisk /dev/vda</span><br><span class="line">WARNING: fdisk GPT support is currently new, and therefore in an experimental phase. Use at your own discretion.</span><br><span class="line">Welcome to fdisk (util-linux 2.23.2).</span><br><span class="line"></span><br><span class="line">Changes will remain in memory only, until you decide to write them.</span><br><span class="line">Be careful before using the write command.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Command (m for help):</span><br></pre></td></tr></table></figure>
+<h3 id="创建一个empty-gpt分区表"><a href="#创建一个empty-gpt分区表" class="headerlink" title="创建一个empty gpt分区表"></a>创建一个<code>empty gpt</code>分区表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Command (m for help): g</span><br><span class="line">Building a new GPT disklabel (GUID: C5734B4C-B436-466C-9D1C-693388EA850A)</span><br></pre></td></tr></table></figure>
+<h3 id="创建分区，作为boot分区"><a href="#创建分区，作为boot分区" class="headerlink" title="创建分区，作为boot分区"></a>创建分区，作为<code>boot</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Command (m for help): n</span><br><span class="line">Partition number (1-128, default 1):</span><br><span class="line">First sector (2048-83886046, default 2048):</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G,T,P&#125; (2048-83886046, default 83886046): +512M</span><br><span class="line">Created partition 1</span><br></pre></td></tr></table></figure>
+<h3 id="创建分区，作为home分区"><a href="#创建分区，作为home分区" class="headerlink" title="创建分区，作为home分区"></a>创建分区，作为<code>home</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Command (m for help): n</span><br><span class="line">Partition number (2-128, default 2):</span><br><span class="line">First sector (1050624-83886046, default 1050624):</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G,T,P&#125; (1050624-83886046, default 83886046): +10G</span><br><span class="line">Created partition 2</span><br></pre></td></tr></table></figure>
+<h3 id="创建分区，作为-分区"><a href="#创建分区，作为-分区" class="headerlink" title="创建分区，作为/分区"></a>创建分区，作为<code>/</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Command (m for help): n</span><br><span class="line">Partition number (3-128, default 3):</span><br><span class="line">First sector (22022144-83886046, default 22022144):</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G,T,P&#125; (22022144-83886046, default 83886046):</span><br><span class="line">Created partition 3</span><br></pre></td></tr></table></figure>
+<h3 id="查看分区信息-1"><a href="#查看分区信息-1" class="headerlink" title="查看分区信息"></a>查看分区信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command (m for help): p</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Disk /dev/vda: 42.9 GB, 42949672960 bytes, 83886080 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: gpt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#         Start          End    Size  Type            Name</span><br><span class="line">1           34      1000000  488.3M  Microsoft basic</span><br><span class="line">2      1000001     19531250    8.9G  Microsoft basic /home</span><br><span class="line">3     19531776     83884031   30.7G  Microsoft basic /</span><br></pre></td></tr></table></figure>
+<h3 id="格式化boot分区"><a href="#格式化boot分区" class="headerlink" title="格式化boot分区"></a>格式化<code>boot</code>分区</h3><blockquote>
+<p>必须为fat32格式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mkfs.fat -F32 /dev/sdxY</span><br></pre></td></tr></table></figure>
+<h3 id="格式化home-分区"><a href="#格式化home-分区" class="headerlink" title="格式化home,/分区"></a>格式化<code>home</code>,<code>/</code>分区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mkfs.ext4 /dev/sdxY</span><br></pre></td></tr></table></figure>
+<h1 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h1><h2 id="挂载-分区"><a href="#挂载-分区" class="headerlink" title="挂载/分区"></a>挂载<code>/</code>分区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mount /dev/sda3 /mnt</span><br></pre></td></tr></table></figure>
+<h2 id="挂载boot-home分区"><a href="#挂载boot-home分区" class="headerlink" title="挂载boot,home分区"></a>挂载<code>boot</code>,<code>home</code>分区</h2><blockquote>
+<p>一定要先挂载<code>/</code>分区，不然这两个挂载点会被覆盖</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># mkdir /mnt/boot</span><br><span class="line"># mount /dev/sda1 /mnt/boot</span><br><span class="line"></span><br><span class="line"># mkdir /mnt/home</span><br><span class="line"># mount /dev/sda1 /mnt/home</span><br></pre></td></tr></table></figure>
+<h1 id="设置镜像源地址"><a href="#设置镜像源地址" class="headerlink" title="设置镜像源地址"></a>设置镜像源地址</h1><blockquote>
+<p>这一步可以跳过，安装过程中网速可能有些慢</p>
+</blockquote>
+<h2 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装<code>vim</code></h2><blockquote>
+<p>vim最好装上</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S vim</span><br></pre></td></tr></table></figure>
+<h2 id="修改镜像源地址"><a href="#修改镜像源地址" class="headerlink" title="修改镜像源地址"></a>修改镜像源地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+<p>将<code>Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</code>移到第一行</p>
+<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><blockquote>
+<p>也可以使用<code># pacstrap /mnt base base-devel</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacstrap /mnt base</span><br></pre></td></tr></table></figure>
+<h1 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h1><h2 id="生成挂载文件（开机自动挂载分区）"><a href="#生成挂载文件（开机自动挂载分区）" class="headerlink" title="生成挂载文件（开机自动挂载分区）"></a>生成挂载文件（开机自动挂载分区）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>生成之后检查一下文件内容，应该有3个分区被挂载</p>
+</blockquote>
+<h1 id="切换到新系统"><a href="#切换到新系统" class="headerlink" title="切换到新系统"></a>切换到新系统</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># arch-chroot /mnt</span><br></pre></td></tr></table></figure>
+<h1 id="设置本地时区"><a href="#设置本地时区" class="headerlink" title="设置本地时区"></a>设置本地时区</h1><h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>再看时间是对的</p>
+</blockquote>
+<h2 id="同步时间到硬件时钟"><a href="#同步时间到硬件时钟" class="headerlink" title="同步时间到硬件时钟"></a>同步时间到硬件时钟</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># hwclock --systohc</span><br></pre></td></tr></table></figure>
+<h1 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h1><h2 id="取消-etc-locale-gen文件中下面行的注释"><a href="#取消-etc-locale-gen文件中下面行的注释" class="headerlink" title="取消/etc/locale.gen文件中下面行的注释"></a>取消<code>/etc/locale.gen</code>文件中下面行的注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zh_CN.UTF-8 UTF-8</span><br><span class="line">zh_HK.UTF-8 UTF-8</span><br><span class="line">zh_TW.UTF-8 UTF-8</span><br><span class="line">en_US.UTF-8 UTF-8</span><br></pre></td></tr></table></figure>
+<h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># locale-gen</span><br></pre></td></tr></table></figure>
+<h2 id="设置语言-1"><a href="#设置语言-1" class="headerlink" title="设置语言"></a>设置语言</h2><ul>
+<li><p>打开<code>/etc/locale.conf</code>文件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/locale.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加入以下内容</p>
+<blockquote>
+<p>设置为英文，控制台目前无法显示中文，安装桌面环境可以在另外的位置设置为中文</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG=en_US.UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="设置主机名"><a href="#设置主机名" class="headerlink" title="设置主机名"></a>设置主机名</h1><blockquote>
+<p>将<code>/etc/hostname</code>文件的内容修改为<code>archlinux</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/hostname</span><br></pre></td></tr></table></figure>
+<h1 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改<code>hosts</code>文件</h1><blockquote>
+<p>添加以下内容到<code>/etc/hosts</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1   localhost</span><br><span class="line">::1         localhost</span><br></pre></td></tr></table></figure>
+<h1 id="为root用户设置密码"><a href="#为root用户设置密码" class="headerlink" title="为root用户设置密码"></a>为<code>root</code>用户设置密码</h1><blockquote>
+<p>使用命令，然后根据提示输入密码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd</span><br></pre></td></tr></table></figure>
+<h1 id="安装Intel-ucode"><a href="#安装Intel-ucode" class="headerlink" title="安装Intel-ucode"></a>安装Intel-ucode</h1><blockquote>
+<p>非IntelCPU可以跳过此步骤</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S intel-ucode</span><br></pre></td></tr></table></figure>
+<h1 id="安装启动引导"><a href="#安装启动引导" class="headerlink" title="安装启动引导"></a>安装启动引导</h1><h2 id="安装grub与efibootmgr"><a href="#安装grub与efibootmgr" class="headerlink" title="安装grub与efibootmgr"></a>安装<code>grub</code>与<code>efibootmgr</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S grub efibootmgr</span><br></pre></td></tr></table></figure>
+<h2 id="部署grub"><a href="#部署grub" class="headerlink" title="部署grub"></a>部署<code>grub</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub</span><br></pre></td></tr></table></figure>
+<h2 id="生成配置文件"><a href="#生成配置文件" class="headerlink" title="生成配置文件"></a>生成配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
+<h2 id="最后检查一下生成的文件"><a href="#最后检查一下生成的文件" class="headerlink" title="最后检查一下生成的文件"></a>最后检查一下生成的文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>看一下Arch Linux入口是否出现在文件中</p>
+</blockquote>
+<p>###</p>
+<h1 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h1><h2 id="退出新系统"><a href="#退出新系统" class="headerlink" title="退出新系统"></a>退出新系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># exit</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这个时候应该是在新系统中。关于如何区分是在新系统还是在安装盘中，可以看命令提示符前面的<code>root</code>字的颜色，彩色的表示在安装盘中</p>
+</blockquote>
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># reboot</span><br></pre></td></tr></table></figure>
+<h1 id="创建交换文件"><a href="#创建交换文件" class="headerlink" title="创建交换文件"></a>创建交换文件</h1><blockquote>
+<p>重启后进入新系统，到了字符界面</p>
+</blockquote>
+<h2 id="分配一块空间用于交换文件"><a href="#分配一块空间用于交换文件" class="headerlink" title="分配一块空间用于交换文件"></a>分配一块空间用于交换文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># fallocate -l 512M /swapfile</span><br></pre></td></tr></table></figure>
+<h2 id="更改权限"><a href="#更改权限" class="headerlink" title="更改权限"></a>更改权限</h2><blockquote>
+<p>600 = rw- — —</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># chmod 600 /swapfile</span><br></pre></td></tr></table></figure>
+<h2 id="设置交换文件"><a href="#设置交换文件" class="headerlink" title="设置交换文件"></a>设置交换文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mkswap /swapfile</span><br></pre></td></tr></table></figure>
+<h2 id="启用交换文件"><a href="#启用交换文件" class="headerlink" title="启用交换文件"></a>启用交换文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># swapon /swapfile</span><br></pre></td></tr></table></figure>
+<h2 id="添加交换文件到-etc-fstab"><a href="#添加交换文件到-etc-fstab" class="headerlink" title="添加交换文件到/etc/fstab"></a>添加交换文件到<code>/etc/fstab</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/fstab</span><br></pre></td></tr></table></figure>
+<p>新增加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/swapfile none swap defaults 0 0</span><br></pre></td></tr></table></figure></p>
+<h1 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h1><blockquote>
+<p>另见网络配置</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/21/ArchLinux UEFI+GPT安装/" data-id="cjghyusdz001sk9sbj5alg863" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/efi/">efi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分区/">分区</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安装系统/">安装系统</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/21/ArchLinux 网络配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ArchLinux 网络配置
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ArchLinux/">ArchLinux</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/efi/">efi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fcitx/">fcitx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wifi/">wifi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中文化/">中文化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分区/">分区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安装系统/">安装系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/桌面/">桌面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/输入法/">输入法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/archlinux/" style="font-size: 20px;">archlinux</a> <a href="/tags/efi/" style="font-size: 10px;">efi</a> <a href="/tags/fcitx/" style="font-size: 10px;">fcitx</a> <a href="/tags/linux/" style="font-size: 16.67px;">linux</a> <a href="/tags/wifi/" style="font-size: 10px;">wifi</a> <a href="/tags/中文化/" style="font-size: 10px;">中文化</a> <a href="/tags/分区/" style="font-size: 10px;">分区</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/安装系统/" style="font-size: 10px;">安装系统</a> <a href="/tags/桌面/" style="font-size: 13.33px;">桌面</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/软件/" style="font-size: 10px;">软件</a> <a href="/tags/输入法/" style="font-size: 10px;">输入法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux 显示优化/">ArchLinux 显示优化</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux 软件安装/">ArchLinux 安装软件</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux 输入法配置/">ArchLinux 输入法配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/25/ArchLinux 常用软件/">ArchLinux 常用软件</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/23/ArchLinux 设置桌面为中文/">ArchLinux 设置桌面为中文</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ywyself<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

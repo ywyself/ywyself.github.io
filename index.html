@@ -70,15 +70,29 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-ArchLinux美化" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ArchLinux 显示优化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux美化/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.972Z" itemprop="datePublished">2018-04-27</time>
+    <a href="/2018/04/27/ArchLinux 显示优化/" class="article-date">
+  <time datetime="2018-04-27T08:24:33.000Z" itemprop="datePublished">2018-04-27</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/27/ArchLinux 显示优化/">ArchLinux 显示优化</a>
+    </h1>
+  
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -88,21 +102,20 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/default/grub</span><br></pre></td></tr></table></figure>
 <p>  修改 <code>GRUB_GFXMODE=auto</code> 为 <code>GRUB_GFXMODE=1440x900,1366x768,640x480</code></p>
 </li>
-<li>重新生成配置  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
-</li>
 </ul>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><h2 id="安装gtk引擎"><a href="#安装gtk引擎" class="headerlink" title="安装gtk引擎"></a>安装gtk引擎</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S gtk-engine-murrine</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S adwaita-icon-theme</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><code>`</code></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2018/04/27/ArchLinux 显示优化/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux美化/" data-id="cjghrye410001idsboruy5i7z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/27/ArchLinux 显示优化/" data-id="cjghyusd30006k9sbyf58bxfk" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li></ul>
+
     </footer>
   </div>
   
@@ -110,657 +123,16 @@
 
 
   
-    <article id="post-ArchLinux软件安装" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ArchLinux 软件安装" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux软件安装/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.968Z" itemprop="datePublished">2018-04-27</time>
+    <a href="/2018/04/27/ArchLinux 软件安装/" class="article-date">
+  <time datetime="2018-04-27T08:24:33.000Z" itemprop="datePublished">2018-04-27</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
   </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ArchLinux-安装一下软件"><a href="#ArchLinux-安装一下软件" class="headerlink" title="ArchLinux 安装一下软件"></a>ArchLinux 安装一下软件</h1><h2 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu</span><br></pre></td></tr></table></figure>
-<h2 id="安装文件管理器"><a href="#安装文件管理器" class="headerlink" title="安装文件管理器"></a>安装文件管理器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S thunar</span><br></pre></td></tr></table></figure>
-<h2 id="安装chromium"><a href="#安装chromium" class="headerlink" title="安装chromium"></a>安装chromium</h2><blockquote>
-<p>其实可以直接安装chrome的，步骤多了一步，后面再说</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S chromium</span><br></pre></td></tr></table></figure>
-<h2 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h2><ul>
-<li><p>安装fcitx</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装fcitx-gtk3</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-gtk3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装fcitx-configtool</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-configtool</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装输入法</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-libpinyin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置<code>~/.xprofile</code><br>  增加</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export GTK_IM_MODULE=fcitx</span><br><span class="line">export QT_IM_MODULE=fcitx</span><br><span class="line">export XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改<code>~/.config/openbox/autostart</code><br>  增加一行<code>fcitx &amp;</code><br>  表示<code>fcitx</code>在桌面显示后启动</p>
-</li>
-</ul>
-<h2 id="安装yaourt"><a href="#安装yaourt" class="headerlink" title="安装yaourt"></a>安装yaourt</h2><ul>
-<li><p>编辑<code>/etc/pacman.conf</code><br>文本最后加入以下内容</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装yaourt</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -Syu yaourt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装archlinuxcn的keyring</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装google-chrome"><a href="#安装google-chrome" class="headerlink" title="安装google chrome"></a>安装google chrome</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># yaourt -S google-chrome</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>启动失败</p>
-</blockquote>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux软件安装/" data-id="cjghrye430002idsbh3uevglh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArchLinux安装记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux安装记录/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.955Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ArchLinux-安装，UEFI-GPT"><a href="#ArchLinux-安装，UEFI-GPT" class="headerlink" title="ArchLinux 安装，UEFI+GPT"></a>ArchLinux 安装，UEFI+GPT</h1><h2 id="安装前"><a href="#安装前" class="headerlink" title="安装前"></a>安装前</h2><h3 id="设置键盘布局"><a href="#设置键盘布局" class="headerlink" title="设置键盘布局"></a>设置键盘布局</h3><blockquote>
-<p>可以省略，默认为us键盘布局</p>
-<ul>
-<li>查看可用的键盘布局  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    # ls /usr/share/kbd/keymaps/**/*.map.gz</span><br><span class="line">    ```    </span><br><span class="line">- 设置键盘布局</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<pre><code># loadkeys us
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 验证启动方式</span><br><span class="line"></span><br><span class="line">&gt; 以下命令执行成功则为uefi模式启动</span><br><span class="line">- 执行命令</span><br></pre></td></tr></table></figure>
-
- # ls /sys/firmware/efi/efivars
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 连接网络</span><br><span class="line">&gt; 最好使用有线连接，因为简单</span><br><span class="line">- 测试网络是否已经连接</span><br></pre></td></tr></table></figure>
-
-# ping www.baidu.com
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 使用有线连接网络</span><br></pre></td></tr></table></figure>
-
-# dhcpcd
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2. 使用无线连接</span><br><span class="line">    &gt; 使用`wifi-menu`命令，命令可能无法使用，需要先安装`wpa_supplicant`和`dialog`模块</span><br></pre></td></tr></table></figure>
-
-# wifi-menu
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 安装`wpa_supplicant`</span><br></pre></td></tr></table></figure>
-
-# pacman -S wpa_supplicant
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 更新系统时间</span><br><span class="line">- 设置时间同步</span><br><span class="line">    &gt; 注意用`date`看一下时间，与正确时间差了8个小时</span><br></pre></td></tr></table></figure>
-
-# timedatectl set-ntp true
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">### 对磁盘进行分区</span><br><span class="line">&gt; 目前划分的是3个分区，`/boot`，`/home`,`/`</span><br><span class="line">- 对磁盘进行分区</span><br><span class="line">    1. 使用`parted`进行磁盘分区</span><br><span class="line">        - 查看磁盘设备</span><br></pre></td></tr></table></figure>
-
-        # parted -l
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 以下为虚拟机上的分区，分区表格式为mbr</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-
-        &gt; Model: Virtio Block Device (virtblk)
-        &gt; Disk /dev/vda: 42.9GB
-        &gt; Sector size (logical/physical): 512B/512B
-        &gt; Partition Table: msdos
-        &gt; Disk Flags:
-        &gt;
-        &gt; Number Start   End     Size    Type     File system  Flags
-        &gt; 1      1049kB  42.9GB  42.9GB  primary  ext4         boot
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 选择操作设备块</span><br></pre></td></tr></table></figure>
-
-        # parted /dev/vda
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 修改为`GPT`格式</span><br></pre></td></tr></table></figure>
-
-        (parted) mklabel
-        New disk label type? gpt                                                  
-        Warning: Partition(s) on /dev/vda are being used.
-        Ignore/Cancel? i                                                          
-        Warning: The existing disk label on /dev/vda will be destroyed and all data on this disk will be lost. Do you want to continue?
-        Yes/No? y
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 删除已有分区</span><br><span class="line">    &gt; 使用rm 数字删除分区</span><br></pre></td></tr></table></figure>
-
-        (parted) rm 1
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 新建分区</span><br><span class="line">    - 新建`boot`分区</span><br></pre></td></tr></table></figure>
-
-            (parted) mkpart
-            Partition name?  []?
-            File system type?  [ext2]? ext4
-            Start? 0
-            End? 512M
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 新建`home`分区</span><br></pre></td></tr></table></figure>
-
-            (parted) mkpart
-            Partition name?  []? /home
-            File system type?  [ext2]? ext4
-            Start? 512M
-            End? 10G
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 新建`根`分区</span><br></pre></td></tr></table></figure>
-
-            (parted) mkpart
-            Partition name?  []? /
-            File system type?  [ext2]?
-            Start? 10G
-            End? -1
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 查看分区信息</span><br></pre></td></tr></table></figure>
-
-            (parted) p
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-
-            &gt; Model: Virtio Block Device (virtblk)
-            &gt; Disk /dev/vda: 42.9GB
-            &gt; Sector size (logical/physical): 512B/512B
-            &gt; Partition Table: gpt
-            &gt; Disk Flags:
-            &gt;
-            &gt; Number  Start   End     Size    File system  Name   Flags
-            &gt;  1      17.4kB  512MB   512MB
-            &gt;  2      512MB   10.0GB  9488MB               /home
-            &gt;  3      10.0GB  42.9GB  32.9GB               /
-            &gt; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 退出</span><br></pre></td></tr></table></figure>
-
-        (parted) quit
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2. 使用`fdisk`进行磁盘分区</span><br><span class="line">    &gt; 进行`fdisk`的命令交互操作时候不能删除输入的内容</span><br><span class="line">    - 选择操作设备块</span><br></pre></td></tr></table></figure>
-
-        # fdisk /dev/vda
-        WARNING: fdisk GPT support is currently new, and therefore in an experimental phase. Use at your own discretion.
-        Welcome to fdisk (util-linux 2.23.2).
-
-        Changes will remain in memory only, until you decide to write them.
-        Be careful before using the write command.
-
-
-        Command (m for help):
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 创建一个`empty gpt`分区表</span><br></pre></td></tr></table></figure>
-
-        Command (m for help): g
-        Building a new GPT disklabel (GUID: C5734B4C-B436-466C-9D1C-693388EA850A)
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 创建分区，作为`boot`分区</span><br></pre></td></tr></table></figure>
-
-        Command (m for help): n
-        Partition number (1-128, default 1):
-        First sector (2048-83886046, default 2048):
-        Last sector, +sectors or +size{K,M,G,T,P} (2048-83886046, default 83886046): +512M
-        Created partition 1
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 创建分区，作为`home`分区</span><br></pre></td></tr></table></figure>
-
-        Command (m for help): n
-        Partition number (2-128, default 2):
-        First sector (1050624-83886046, default 1050624):
-        Last sector, +sectors or +size{K,M,G,T,P} (1050624-83886046, default 83886046): +10G
-        Created partition 2
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 创建分区，作为`/`分区</span><br></pre></td></tr></table></figure>
-
-        Command (m for help): n
-        Partition number (3-128, default 3):
-        First sector (22022144-83886046, default 22022144):
-        Last sector, +sectors or +size{K,M,G,T,P} (22022144-83886046, default 83886046):
-        Created partition 3
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 查看分区信息</span><br></pre></td></tr></table></figure>
-
-        Command (m for help): p
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-
-        &gt; Disk /dev/vda: 42.9 GB, 42949672960 bytes, 83886080 sectors
-        &gt; Units = sectors of 1 * 512 = 512 bytes
-        &gt; Sector size (logical/physical): 512 bytes / 512 bytes
-        &gt; I/O size (minimum/optimal): 512 bytes / 512 bytes
-        &gt; Disk label type: gpt
-        &gt;
-        &gt;
-        &gt; #         Start          End    Size  Type            Name
-        &gt; 1           34      1000000  488.3M  Microsoft basic
-        &gt; 2      1000001     19531250    8.9G  Microsoft basic /home
-        &gt; 3     19531776     83884031   30.7G  Microsoft basic /
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 格式化`boot`分区</span><br><span class="line">    &gt; 必须为fat32格式</span><br></pre></td></tr></table></figure>
-
-        # mkfs.fat -F32 /dev/sdxY
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 格式化`home`,`/`分区</span><br></pre></td></tr></table></figure>
-
-        # mkfs.ext4 /dev/sdxY
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 挂载分区</span><br><span class="line">- 挂载`/`分区</span><br></pre></td></tr></table></figure>
-
-# mount /dev/sda3 /mnt
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 挂载`boot`,`home`分区</span><br><span class="line">    &gt; 一定要先挂载`/`分区，不然这两个挂载点会被覆盖</span><br></pre></td></tr></table></figure>
-
-# mkdir /mnt/boot
-# mount /dev/sda1 /mnt/boot
-# mkdir /mnt/home
-# mount /dev/sda1 /mnt/home
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## 安装</span><br><span class="line">### 选择镜像源地址</span><br><span class="line">&gt; 这一步可以跳过，安装过程中网速可能有些慢</span><br><span class="line">- 安装`vim`</span><br><span class="line">    &gt; vim最好装上</span><br></pre></td></tr></table></figure>
-
-# pacman -S vim
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 修改镜像源地址</span><br></pre></td></tr></table></figure>
-
-# vim /etc/pacman.d/mirrorlist
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 安装基础包</span><br><span class="line">&gt; 也可以使用`# pacstrap /mnt base base-devel`</span><br></pre></td></tr></table></figure>
-</code></pre><h1 id="pacstrap-mnt-base"><a href="#pacstrap-mnt-base" class="headerlink" title="pacstrap /mnt base"></a>pacstrap /mnt base</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 配置系统</span><br><span class="line">### 生成挂载文件（开机自动挂载分区）</span><br></pre></td></tr></table></figure>
-<h1 id="genfstab-U-mnt-gt-gt-mnt-etc-fstab"><a href="#genfstab-U-mnt-gt-gt-mnt-etc-fstab" class="headerlink" title="genfstab -U /mnt &gt;&gt; /mnt/etc/fstab"></a>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 生成之后检查一下文件内容，应该有3个分区被挂载</span><br><span class="line">### 切换到新系统中</span><br></pre></td></tr></table></figure>
-<h1 id="arch-chroot-mnt"><a href="#arch-chroot-mnt" class="headerlink" title="arch-chroot /mnt"></a>arch-chroot /mnt</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 设置本地时区</span><br><span class="line">- 设置时区</span><br><span class="line">    &gt; 再看时间是对的</span><br></pre></td></tr></table></figure>
-<pre><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 同步时间到硬件时钟</span><br></pre></td></tr></table></figure>
-
-# hwclock --systohc
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 本地化</span><br><span class="line">- 取消`/etc/locale.gen`文件中下面行的注释</span><br><span class="line">    &gt;</span><br></pre></td></tr></table></figure>
-
-&gt; zh_CN.UTF-8 UTF-8
-&gt; zh_HK.UTF-8 UTF-8
-&gt; zh_TW.UTF-8 UTF-8
-&gt; en_US.UTF-8 UTF-8
-&gt; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 执行命令</span><br></pre></td></tr></table></figure>
-
-# locale-gen
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 设置本地语言</span><br><span class="line">    - 打开`/etc/locale.conf`文件</span><br></pre></td></tr></table></figure>
-
-    # vim /etc/locale.conf
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 加入以下内容</span><br><span class="line">    &gt; 设置为英文，目前还没有安装中文字体</span><br></pre></td></tr></table></figure>
-
-    LANG=en_US.UTF-8
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 设置主机名</span><br><span class="line">&gt; 将`/etc/hostname`文件的内容修改为`archlinux`</span><br></pre></td></tr></table></figure>
-</code></pre><h1 id="vim-etc-hostname"><a href="#vim-etc-hostname" class="headerlink" title="vim /etc/hostname"></a>vim /etc/hostname</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 修改`hosts`文件</span><br><span class="line">&gt; 添加以下内容到`/etc/hosts`</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>127.0.0.1    localhost<br>::1            localhost<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"># vim /etc/hosts</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h3><ul>
-<li>安装<code>dialog</code>, <code>wpa_supplicant</code><blockquote>
-<p>安装<code>wpa_supplicant</code>后可以使用<code>wifi-menu</code>命令，用界面连接wifi，依赖<code>dialog</code>模块</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S wpa_supplicant dialog</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h3 id="为root用户设置密码"><a href="#为root用户设置密码" class="headerlink" title="为root用户设置密码"></a>为<code>root</code>用户设置密码</h3><blockquote>
-<p>使用命令，然后根据提示输入密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="安装Intel-ucode"><a href="#安装Intel-ucode" class="headerlink" title="安装Intel-ucode"></a>安装Intel-ucode</h3><blockquote>
-<p>非IntelCPU可以跳过此步骤<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S intel-ucode</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="安装启动引导"><a href="#安装启动引导" class="headerlink" title="安装启动引导"></a>安装启动引导</h3><ul>
-<li><p>安装<code>grub</code>与<code>efibootmgr</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S grub efibootmgr</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>部署<code>grub</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成配置文件</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>最后检查一下生成的文件</p>
-<blockquote>
-<p>看一下Arch Linux入口是否出现在文件中</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h2 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h2><ul>
-<li><p>退出新系统</p>
-<blockquote>
-<p>这个时候应该是在新系统中。关于如何区分是在新系统还是在安装盘中，可以看命令提示符前面的<code>root</code>字的颜色，彩色的表示在安装盘中</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># exit</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>重启</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># reboot</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="继续一些设置"><a href="#继续一些设置" class="headerlink" title="继续一些设置"></a>继续一些设置</h2><blockquote>
-<p>重启后进入新系统，到了字符界面，继续一些其他的设置，以及桌面环境的安装</p>
-</blockquote>
-<h3 id="创建交换文件"><a href="#创建交换文件" class="headerlink" title="创建交换文件"></a>创建交换文件</h3><ul>
-<li><p>分配一块空间用于交换文件</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># fallocate -l 512M /swapfile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更改权限</p>
-<blockquote>
-<p>600 = rw- — —</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># chmod 600 /swapfile</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>设置交换文件</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># mkswap /swapfile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启用交换文件</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># swapon /swapfile</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加交换文件到<code>/etc/fstab</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/fstab</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>新增加一行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; /swapfile none swap defaults 0 0</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h3 id="新建一个用户"><a href="#新建一个用户" class="headerlink" title="新建一个用户"></a>新建一个用户</h3><ul>
-<li><p>新建用户</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel myUserName</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>-m 是为用户创建家目录(如果有则不用这个参数)</li>
-<li>-G 为用户设置一个分组，wheel属于管理组</li>
-</ul>
-</blockquote>
-</li>
-<li>给新用户设置密码  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd myUserName</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="配置sudo"><a href="#配置sudo" class="headerlink" title="配置sudo"></a>配置sudo</h3><blockquote>
-<p>如果在安装系统时安装了<code>base-devel</code>这个包，那么这个命令在安装系统是一起安装了</p>
-<ul>
-<li>安装<code>sudo</code>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S sudo</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>修改<code>/etc/sudoers</code></p>
-<ul>
-<li><p>方法一：在<code>root ALL=(ALL) ALL</code>行下新增加一行</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myUserName  ALL=(ALL)   ALL</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法二：取消<code>%wheel  ALL=(ALL)       ALL</code>行的注释</p>
-<h3 id="文件系统支持"><a href="#文件系统支持" class="headerlink" title="文件系统支持"></a>文件系统支持</h3><blockquote>
-<p>要支持制作fat文件系统，安装dosfstools，默认内核只能读取ntfs，要支持ntfs读写，安装ntfs-3g</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S ntfs-3g dosfstools</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="安装桌面环境"><a href="#安装桌面环境" class="headerlink" title="安装桌面环境"></a>安装桌面环境</h2><h3 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h3><ul>
-<li>连接网络<ul>
-<li>有线使用<code>dhcpcd</code></li>
-<li>无线使用<code>wifi-menu</code></li>
-</ul>
-</li>
-<li>检测一下  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ping www.baidu.com</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h3><ul>
-<li>安装显卡驱动<blockquote>
-<p>在安装Xorg的时候好像会一起安装</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xf86-video-intel</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h3 id="安装桌面"><a href="#安装桌面" class="headerlink" title="安装桌面"></a>安装桌面</h3><ul>
-<li><p>安装Xorg服务</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装桌面Xfce</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xfce4 xfce4-goodies</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装桌面管理器sddm</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S sddm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置开机启动sddm服务</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable sddm</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="提前配置网络"><a href="#提前配置网络" class="headerlink" title="提前配置网络"></a>提前配置网络</h3><ul>
-<li><p>安装<code>networkmanager</code>软件</p>
-<blockquote>
-<p>是图形化的网络管理工具，安装桌面后需要用到</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S networkmanager</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>启用<code>NetworkManager</code>网络服务</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl disable netctl</span><br><span class="line"># systemctl enable NetworkManager</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装工具栏工具来显示网络设置图标</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S network-manager-applet</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="字体设置"><a href="#字体设置" class="headerlink" title="字体设置"></a>字体设置</h3><ul>
-<li><p>安装字体</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开启桌面（系统）中文</p>
-<blockquote>
-<p>开启中文后字符界面（tty）无法显示中文，无法进入桌面时可以将系统字体改为英文，通常也没有机会再用tty了</p>
-<ul>
-<li>修改<code>/etc/locale.conf</code><br>将<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; LANG=en_US.UTF-8</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<pre><code>&gt; 改为
-&gt; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; LANG=zh_CN.UTF-8</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-</ul>
-<h3 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h3><ul>
-<li><p>安装<code>fcitx</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装输入法模块</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-gtk3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装一个输入法</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-libpinyin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装输入法图形设置界面</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-configtool</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装一些软件"><a href="#安装一些软件" class="headerlink" title="安装一些软件"></a>安装一些软件</h2><h3 id="chromuim"><a href="#chromuim" class="headerlink" title="chromuim"></a>chromuim</h3><blockquote>
-<p>浏览器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S chromuim</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="screenfetch"><a href="#screenfetch" class="headerlink" title="screenfetch"></a>screenfetch</h3><blockquote>
-<p>在终端打印发行版logo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S screenfetch</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="dock"><a href="#dock" class="headerlink" title="dock"></a>dock</h3><blockquote>
-<p>要获得像苹果osx一样的dock可以用docky或者dash-to-dock<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S docky</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="sl"><a href="#sl" class="headerlink" title="sl"></a>sl</h3><blockquote>
-<p>火车头<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S sl</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux安装记录/" data-id="cjghrye490004idsbcnif630y" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArchLinux安装桌面过程记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux安装桌面过程记录/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.948Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="给ArchLinux安装图形界面"><a href="#给ArchLinux安装图形界面" class="headerlink" title="给ArchLinux安装图形界面"></a>给ArchLinux安装图形界面</h1><blockquote>
-<p>本文档主要记录了在安装Archlinux后，给她安装图形界面<br>   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面<br>   这是说的是最精简的方式，不是最简单的方式<br>   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了<br>   最精简的方式的话，安装少量的软件，然后自己修改配置文件</p>
-</blockquote>
-<blockquote>
-<p>接下来开始本次安装图形界面的过程记录<br>  可能与实际操作有些出入，这个记录是后来写的，当时尝试过哪些方法也不记得了<br>  主要还是按照官方wiki上的方法</p>
-</blockquote>
-<h2 id="安装X服务"><a href="#安装X服务" class="headerlink" title="安装X服务"></a>安装<code>X</code>服务</h2><blockquote>
-<p>linux 下所有的图形界面绘制都由X服务来完成，拥有图形界面的程序必备（依赖）</p>
-</blockquote>
-<ul>
-<li><p>安装<code>xorg</code></p>
-<blockquote>
-<p>X.Org项目提供了 X 窗口系统的开源实现</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>默认安装了所有，不知道每个包的具体作用</p>
-</blockquote>
-</li>
-<li><p>安装驱动</p>
-<blockquote>
-<p>安装<code>xorg</code>之后应该已经安装好了驱动，这里就直接安装一次，不影响<br>  我的是intel和英伟达双显卡，这里值安装intel集显的驱动</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xf86-video-intel</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装xinit"><a href="#安装xinit" class="headerlink" title="安装xinit"></a>安装<code>xinit</code></h2><blockquote>
-<p>用这个来启动<code>xorg</code>显示服务</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xinit</span><br></pre></td></tr></table></figure>
-<h2 id="测试图形界面显示"><a href="#测试图形界面显示" class="headerlink" title="测试图形界面显示"></a>测试图形界面显示</h2><blockquote>
-<p>在安装完xorg之后就已经可以显示图形界面了<br>  可以不用测试，直接安装窗口管理器<br>  不过默认的配置有几个依赖软件包没有安装上</p>
-</blockquote>
-<h3 id="一些软件"><a href="#一些软件" class="headerlink" title="一些软件"></a>一些软件</h3><blockquote>
-<p>具体软件包的名字<code>/etc/X11/xinit/xinitrc</code></p>
-<ul>
-<li>安装twm，默认配置用的窗口管理器</li>
-<li>安装xterm，默认终端</li>
-<li>安装xclock，一个时间显示的软件</li>
-<li>运行命令<br>可能需要以root的身份运行</li>
-</ul>
-</blockquote>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># startx</span><br></pre></td></tr></table></figure>
-
-&gt; 运行后的界面是一种瓷砖窗口管理器的样式
-</code></pre><h2 id="显示管理器使用lightdm"><a href="#显示管理器使用lightdm" class="headerlink" title="显示管理器使用lightdm"></a>显示管理器使用lightdm</h2><h2 id="窗口管理器使用openbox"><a href="#窗口管理器使用openbox" class="headerlink" title="窗口管理器使用openbox"></a>窗口管理器使用openbox</h2><h1 id="虚拟机中的步骤记录"><a href="#虚拟机中的步骤记录" class="headerlink" title="虚拟机中的步骤记录"></a>虚拟机中的步骤记录</h1><h2 id="简单实现"><a href="#简单实现" class="headerlink" title="简单实现"></a>简单实现</h2><ul>
-<li><p>安装xorg</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装xinit</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xinit</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装twm</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-twm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装xterm</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xterm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装xclock</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xclock</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试界面</p>
-<blockquote>
-<p>运行命令后可以看到一个界面了</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># startx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试界面2</p>
-<blockquote>
-<p>和上面的效果一样</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># xinit /etc/X11/xinit/xinitrc</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装openbox"><a href="#安装openbox" class="headerlink" title="安装openbox"></a>安装openbox</h2><blockquote>
-<p>首先添加一个普通用户</p>
-<ul>
-<li>添加用户</li>
-</ul>
-</blockquote>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel ywyself</span><br></pre></td></tr></table></figure>
-</code></pre><ul>
-<li><p>设置密码</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd ywyself</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>openbox作为窗口管理器</p>
-</blockquote>
-<ul>
-<li><p>安装openbox</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S openbox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制openbox的配置文件到家目录</p>
-<blockquote>
-<p>这里用普通用户来操作</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp -R /etc/xdg/openbox ~/.config/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制xinit的配置到家目录</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改~/.xinitrc/xinitrc</p>
-<blockquote>
-<p>将最后的几行（从twm开始到结束）修改为</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec openbox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行</p>
-<blockquote>
-<p>这里需要用root权限来运行</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># xinit .xinitrc/xinitrc</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这里运行后也显示了一个图形界面，不过与之前的不同，这次的窗口管理器使用的是openbox，右键里面的程序只有一个xterm能用</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="安装lightdm"><a href="#安装lightdm" class="headerlink" title="安装lightdm"></a>安装lightdm</h2><blockquote>
-<p>这个作为dm</p>
-<ul>
-<li>安装lightdm  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S lightdm</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>安装greeter（登录器）</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改greeter的配置</p>
-<blockquote>
-<p>这个可以使用<code>ls /usr/share/xgreeters</code>命令查询，这个目录下的.desktop目录都代表一个可用 greeter</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Seat:*]</span><br><span class="line">...</span><br><span class="line">greeter-session=lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>设置lightdm开机启动</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl emable lightdm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># reboot</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>在虚拟机中的测试lightdm无法启动，虚拟机中改用了sddm，可以启动</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux安装桌面过程记录/" data-id="cjghrye3x0000idsb35ba5p0c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/hello-world/" class="article-date">
-  <time datetime="2018-04-27T06:03:55.165Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
   </div>
   <div class="article-inner">
     
@@ -769,7 +141,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/27/hello-world/">Hello World</a>
+      <a class="article-title" href="/2018/04/27/ArchLinux 软件安装/">ArchLinux 安装软件</a>
     </h1>
   
 
@@ -777,22 +149,457 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="ArchLinux-安装软件"><a href="#ArchLinux-安装软件" class="headerlink" title="ArchLinux 安装软件"></a>ArchLinux 安装软件</h1><h2 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu</span><br></pre></td></tr></table></figure>
+<h2 id="安装文件管理器"><a href="#安装文件管理器" class="headerlink" title="安装文件管理器"></a>安装文件管理器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S thunar</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/27/ArchLinux 软件安装/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/27/ArchLinux 软件安装/" data-id="cjghyusda000fk9sb54ki4cnt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 输入法配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/27/ArchLinux 输入法配置/" class="article-date">
+  <time datetime="2018-04-27T08:24:33.000Z" itemprop="datePublished">2018-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/27/ArchLinux 输入法配置/">ArchLinux 输入法配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装fcitx"><a href="#安装fcitx" class="headerlink" title="安装fcitx"></a>安装<code>fcitx</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx</span><br></pre></td></tr></table></figure>
+<h1 id="安装fcitx-gtk3"><a href="#安装fcitx-gtk3" class="headerlink" title="安装fcitx-gtk3"></a>安装<code>fcitx-gtk3</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-gtk3</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/27/ArchLinux 输入法配置/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/27/ArchLinux 输入法配置/" data-id="cjghyusdc000hk9sblowru8k6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fcitx/">fcitx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/输入法/">输入法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 常用软件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/25/ArchLinux 常用软件/" class="article-date">
+  <time datetime="2018-04-25T08:30:00.000Z" itemprop="datePublished">2018-04-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/25/ArchLinux 常用软件/">ArchLinux 常用软件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><blockquote>
+<p>安装chromuim浏览器</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S chromuim</span><br></pre></td></tr></table></figure>
+<h1 id="screenfetch"><a href="#screenfetch" class="headerlink" title="screenfetch"></a>screenfetch</h1><blockquote>
+<p>在终端打印发行版logo</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/25/ArchLinux 常用软件/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/25/ArchLinux 常用软件/" data-id="cjghyusd10005k9sbkrctxgru" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 设置桌面为中文" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/23/ArchLinux 设置桌面为中文/" class="article-date">
+  <time datetime="2018-04-23T08:30:00.000Z" itemprop="datePublished">2018-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/23/ArchLinux 设置桌面为中文/">ArchLinux 设置桌面为中文</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu</span><br></pre></td></tr></table></figure>
+<h1 id="开启桌面（系统）中文"><a href="#开启桌面（系统）中文" class="headerlink" title="开启桌面（系统）中文"></a>开启桌面（系统）中文</h1><blockquote>
+<p>开启中文后字符界面（tty）无法显示中文，无法进入桌面时可以将系统字体改为英文</p>
+</blockquote>
+<h2 id="修改-etc-locale-conf"><a href="#修改-etc-locale-conf" class="headerlink" title="修改/etc/locale.conf"></a>修改<code>/etc/locale.conf</code></h2><blockquote>
+<p>不建议直接改这里</p>
+</blockquote>
+<p>将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG=en_US.UTF-8</span><br></pre></td></tr></table></figure></p>
+<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改-xprofile"><a href="#修改-xprofile" class="headerlink" title="修改~/.xprofile"></a>修改<code>~/.xprofile</code></h2><blockquote>
+<p>推荐这种，为用户单独设置语言<br>  注意是使用普通用户来操作</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.xprofile</span><br></pre></td></tr></table></figure>
+<p>添加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/hello-world/" data-id="cjghrye450003idsbg77ntq1f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/23/ArchLinux 设置桌面为中文/" data-id="cjghyusd7000bk9sbm8uj7m1f" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/中文化/">中文化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字体/">字体</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 安装桌面，不使用集成桌面环境" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/23/ArchLinux 安装桌面，不使用集成桌面环境/" class="article-date">
+  <time datetime="2018-04-23T08:24:33.000Z" itemprop="datePublished">2018-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/23/ArchLinux 安装桌面，不使用集成桌面环境/">ArchLinux 安装桌面，不使用集成桌面环境</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ArchLinux-安装桌面，不使用集成桌面环境"><a href="#ArchLinux-安装桌面，不使用集成桌面环境" class="headerlink" title="ArchLinux 安装桌面，不使用集成桌面环境"></a>ArchLinux 安装桌面，不使用集成桌面环境</h1><blockquote>
+<p>本文档主要记录了在安装Archlinux后，给她安装图形界面<br>   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面<br>   这是说的是最精简的方式，不是最简单的方式<br>   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了<br>   最精简的方式的话，安装少量的软件，然后自己修改配置文件</p>
+</blockquote>
+<blockquote>
+<p>接下来开始本次安装图形界面的过程记录<br>  可能与实际操作有些出入，这个记录是后来写的，当时尝试过哪些方法也不记得了<br>  主要还是按照官方wiki上的方法</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/23/ArchLinux 安装桌面，不使用集成桌面环境/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/23/ArchLinux 安装桌面，不使用集成桌面环境/" data-id="cjghyusd00004k9sbjumtpl9r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/桌面/">桌面</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 安装桌面（前期知识了解）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/23/ArchLinux 安装桌面（前期知识了解）/" class="article-date">
+  <time datetime="2018-04-23T02:24:33.000Z" itemprop="datePublished">2018-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/23/ArchLinux 安装桌面（前期知识了解）/">ArchLinux 安装桌面（前期知识了解）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如何自定义一个桌面环境"><a href="#如何自定义一个桌面环境" class="headerlink" title="如何自定义一个桌面环境"></a>如何自定义一个桌面环境</h1><blockquote>
+<p>基本了解</p>
+</blockquote>
+<p>linux本身 –&gt; X服务器 <- [通过x协议交谈]="" -=""> 窗口管理器(综合桌面环境) –&gt; X应用程序</-></p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>linux图形界面又称x系统，主要需要了解如下几个部分：</p>
+<h2 id="xserver-X服务"><a href="#xserver-X服务" class="headerlink" title="xserver X服务"></a>xserver X服务</h2><h2 id="Display-Manager-dw-显示管理（登录管理器）"><a href="#Display-Manager-dw-显示管理（登录管理器）" class="headerlink" title="Display Manager (dw) 显示管理（登录管理器）"></a>Display Manager (dw) 显示管理（登录管理器）</h2><ul>
+<li><a href="https://wiki.archlinux.org/index.php/LightDM#Installation" target="_blank" rel="noopener">lightdm</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/LXDM#Installation" target="_blank" rel="noopener">sddm</a></li>
+</ul>
+<h2 id="Window-Manager-wm-窗口管理"><a href="#Window-Manager-wm-窗口管理" class="headerlink" title="Window Manager (wm) 窗口管理"></a>Window Manager (wm) 窗口管理</h2><ul>
+<li><a href="https://wiki.archlinux.org/index.php/Openbox#Installation" target="_blank" rel="noopener">openbox</a></li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/23/ArchLinux 安装桌面（前期知识了解）/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/23/ArchLinux 安装桌面（前期知识了解）/" data-id="cjghyuscw0001k9sbyt5xfqhy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/桌面/">桌面</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 安装桌面" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/22/ArchLinux 安装桌面/" class="article-date">
+  <time datetime="2018-04-22T08:30:00.000Z" itemprop="datePublished">2018-04-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/22/ArchLinux 安装桌面/">ArchLinux 安装桌面环境</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="新建一个用户"><a href="#新建一个用户" class="headerlink" title="新建一个用户"></a>新建一个用户</h1><h2 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel myUserName</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>-m 是为用户创建家目录(如果有则不用这个参数)</li>
+<li>-G 为用户设置一个分组，wheel属于管理组</li>
+</ul>
+</blockquote>
+<h2 id="给新用户设置密码"><a href="#给新用户设置密码" class="headerlink" title="给新用户设置密码"></a>给新用户设置密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd myUserName</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/22/ArchLinux 安装桌面/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/22/ArchLinux 安装桌面/" data-id="cjghyuscs0000k9sbegolb2ub" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/桌面/">桌面</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux 网络配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/21/ArchLinux 网络配置/" class="article-date">
+  <time datetime="2018-04-21T08:30:00.000Z" itemprop="datePublished">2018-04-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/21/ArchLinux 网络配置/">ArchLinux 网络配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用有线连接"><a href="#使用有线连接" class="headerlink" title="使用有线连接"></a>使用有线连接</h1><blockquote>
+<p>确保网线连接正常</p>
+</blockquote>
+<h2 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># dhcpcd</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用<code>ping</code>检查网络连接</p>
+</blockquote>
+<h2 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable dhcpcd</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/21/ArchLinux 网络配置/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/21/ArchLinux 网络配置/" data-id="cjghyusd60009k9sbbxn3wjsj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wifi/">wifi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArchLinux UEFI+GPT安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/21/ArchLinux UEFI+GPT安装/" class="article-date">
+  <time datetime="2018-04-21T08:24:33.000Z" itemprop="datePublished">2018-04-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/21/ArchLinux UEFI+GPT安装/">ArchLinux 安装，UEFI+GPT</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h1><blockquote>
+<p>使用usbwriter</p>
+</blockquote>
+<h1 id="设置键盘布局"><a href="#设置键盘布局" class="headerlink" title="设置键盘布局"></a>设置键盘布局</h1><blockquote>
+<p>可以省略，默认为us键盘布局</p>
+</blockquote>
+<h2 id="查看可用的键盘布局"><a href="#查看可用的键盘布局" class="headerlink" title="查看可用的键盘布局"></a>查看可用的键盘布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ls /usr/share/kbd/keymaps/**/*.map.gz</span><br></pre></td></tr></table></figure>
+<h2 id="设置键盘布局-1"><a href="#设置键盘布局-1" class="headerlink" title="设置键盘布局"></a>设置键盘布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># loadkeys us</span><br></pre></td></tr></table></figure>
+<h1 id="验证启动方式"><a href="#验证启动方式" class="headerlink" title="验证启动方式"></a>验证启动方式</h1><blockquote>
+<p>以下命令执行成功则为uefi模式启动</p>
+</blockquote>
+<ul>
+<li>执行命令  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ls /sys/firmware/efi/efivars</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2018/04/21/ArchLinux UEFI+GPT安装/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/21/ArchLinux UEFI+GPT安装/" data-id="cjghyusdz001sk9sbj5alg863" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/efi/">efi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分区/">分区</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安装系统/">安装系统</a></li></ul>
+
     </footer>
   </div>
   
@@ -807,12 +614,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ArchLinux/">ArchLinux</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/efi/">efi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fcitx/">fcitx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wifi/">wifi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中文化/">中文化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分区/">分区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安装系统/">安装系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/桌面/">桌面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/输入法/">输入法</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/archlinux/" style="font-size: 20px;">archlinux</a> <a href="/tags/efi/" style="font-size: 10px;">efi</a> <a href="/tags/fcitx/" style="font-size: 10px;">fcitx</a> <a href="/tags/linux/" style="font-size: 16.67px;">linux</a> <a href="/tags/wifi/" style="font-size: 10px;">wifi</a> <a href="/tags/中文化/" style="font-size: 10px;">中文化</a> <a href="/tags/分区/" style="font-size: 10px;">分区</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/安装系统/" style="font-size: 10px;">安装系统</a> <a href="/tags/桌面/" style="font-size: 13.33px;">桌面</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/软件/" style="font-size: 10px;">软件</a> <a href="/tags/输入法/" style="font-size: 10px;">输入法</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -831,23 +659,23 @@
       <ul>
         
           <li>
-            <a href="/2018/04/27/ArchLinux美化/">(no title)</a>
+            <a href="/2018/04/27/ArchLinux 显示优化/">ArchLinux 显示优化</a>
           </li>
         
           <li>
-            <a href="/2018/04/27/ArchLinux软件安装/">(no title)</a>
+            <a href="/2018/04/27/ArchLinux 软件安装/">ArchLinux 安装软件</a>
           </li>
         
           <li>
-            <a href="/2018/04/27/ArchLinux安装记录/">(no title)</a>
+            <a href="/2018/04/27/ArchLinux 输入法配置/">ArchLinux 输入法配置</a>
           </li>
         
           <li>
-            <a href="/2018/04/27/ArchLinux安装桌面过程记录/">(no title)</a>
+            <a href="/2018/04/25/ArchLinux 常用软件/">ArchLinux 常用软件</a>
           </li>
         
           <li>
-            <a href="/2018/04/27/hello-world/">Hello World</a>
+            <a href="/2018/04/23/ArchLinux 设置桌面为中文/">ArchLinux 设置桌面为中文</a>
           </li>
         
       </ul>

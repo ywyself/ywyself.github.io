@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ArchLinux 网络配置 | YsBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用有线连接 确保网线连接正常  连接网络1# dhcpcd  使用ping检查网络连接  设置开机启动1# systemctl enable dhcpcd">
+<meta name="keywords" content="archlinux,linux,网络,wifi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArchLinux 网络配置">
+<meta property="og:url" content="http://yoursite.com/2018/04/21/ArchLinux 网络配置/index.html">
+<meta property="og:site_name" content="YsBlog">
+<meta property="og:description" content="使用有线连接 确保网线连接正常  连接网络1# dhcpcd  使用ping检查网络连接  设置开机启动1# systemctl enable dhcpcd">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-27T13:01:27.592Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ArchLinux 网络配置">
+<meta name="twitter:description" content="使用有线连接 确保网线连接正常  连接网络1# dhcpcd  使用ping检查网络连接  设置开机启动1# systemctl enable dhcpcd">
+  
+    <link rel="alternate" href="/atom.xml" title="YsBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YsBlog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ywyself</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ArchLinux 网络配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/21/ArchLinux 网络配置/" class="article-date">
+  <time datetime="2018-04-21T08:30:00.000Z" itemprop="datePublished">2018-04-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ArchLinux/">ArchLinux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ArchLinux 网络配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用有线连接"><a href="#使用有线连接" class="headerlink" title="使用有线连接"></a>使用有线连接</h1><blockquote>
+<p>确保网线连接正常</p>
+</blockquote>
+<h2 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># dhcpcd</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用<code>ping</code>检查网络连接</p>
+</blockquote>
+<h2 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable dhcpcd</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="使用无线连接"><a href="#使用无线连接" class="headerlink" title="使用无线连接"></a>使用无线连接</h1><blockquote>
+<p>无线连接需要安装一些软件，所以要在有网的时候将软件安装上去</p>
+</blockquote>
+<h2 id="安装wpa-supplicant"><a href="#安装wpa-supplicant" class="headerlink" title="安装wpa_supplicant"></a>安装<code>wpa_supplicant</code></h2><blockquote>
+<p>提供wifi连接功能<br>  安装<code>wpa_supplicant</code>后可以使用<code>wifi-menu</code>命令，用界面连接wifi，依赖<code>dialog</code>模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S wpa_supplicant</span><br></pre></td></tr></table></figure>
+<h2 id="安装dialog"><a href="#安装dialog" class="headerlink" title="安装dialog"></a>安装<code>dialog</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S dialog</span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装<code></code></h2><blockquote>
+<p>设置开机自动连接wifi时，需要这个包</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S</span><br></pre></td></tr></table></figure>
+<h1 id="图形网络管理工具"><a href="#图形网络管理工具" class="headerlink" title="图形网络管理工具"></a>图形网络管理工具</h1><h2 id="安装networkmanager"><a href="#安装networkmanager" class="headerlink" title="安装networkmanager"></a>安装<code>networkmanager</code></h2><blockquote>
+<p>是图形化的网络管理工具，安装桌面后需要用到</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S networkmanager</span><br></pre></td></tr></table></figure>
+<h2 id="启用NetworkManager网络服务"><a href="#启用NetworkManager网络服务" class="headerlink" title="启用NetworkManager网络服务"></a>启用<code>NetworkManager</code>网络服务</h2><blockquote>
+<p>注意大小写</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl disable netctl</span><br><span class="line"># systemctl enable NetworkManager</span><br></pre></td></tr></table></figure>
+<h2 id="在工具栏显示网络设置图标"><a href="#在工具栏显示网络设置图标" class="headerlink" title="在工具栏显示网络设置图标"></a>在工具栏显示网络设置图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S network-manager-applet</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/21/ArchLinux 网络配置/" data-id="cjghyusd60009k9sbbxn3wjsj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wifi/">wifi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/22/ArchLinux 安装桌面/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ArchLinux 安装桌面环境
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/21/ArchLinux UEFI+GPT安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ArchLinux 安装，UEFI+GPT</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ArchLinux/">ArchLinux</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/efi/">efi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fcitx/">fcitx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wifi/">wifi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中文化/">中文化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分区/">分区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安装系统/">安装系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/桌面/">桌面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/输入法/">输入法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/archlinux/" style="font-size: 20px;">archlinux</a> <a href="/tags/efi/" style="font-size: 10px;">efi</a> <a href="/tags/fcitx/" style="font-size: 10px;">fcitx</a> <a href="/tags/linux/" style="font-size: 16.67px;">linux</a> <a href="/tags/wifi/" style="font-size: 10px;">wifi</a> <a href="/tags/中文化/" style="font-size: 10px;">中文化</a> <a href="/tags/分区/" style="font-size: 10px;">分区</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/安装系统/" style="font-size: 10px;">安装系统</a> <a href="/tags/桌面/" style="font-size: 13.33px;">桌面</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/软件/" style="font-size: 10px;">软件</a> <a href="/tags/输入法/" style="font-size: 10px;">输入法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux 显示优化/">ArchLinux 显示优化</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux 软件安装/">ArchLinux 安装软件</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux 输入法配置/">ArchLinux 输入法配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/25/ArchLinux 常用软件/">ArchLinux 常用软件</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/23/ArchLinux 设置桌面为中文/">ArchLinux 设置桌面为中文</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ywyself<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
