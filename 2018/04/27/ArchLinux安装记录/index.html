@@ -7,17 +7,18 @@
   
   <title>YsBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ywyself">
+  <meta name="description" content="ArchLinux 安装，UEFI+GPT安装前设置键盘布局 可以省略，默认为us键盘布局  查看可用的键盘布局  123    # ls /usr/share/kbd/keymaps/**/*.map.gz    ```    - 设置键盘布局    # loadkeys us 1234### 验证启动方式&amp;gt; 以下命令执行成功则为uefi模式启动- 执行命令   # ls /sys/fir">
 <meta name="keywords" content="ywyself">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YsBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/ArchLinux安装记录/index.html">
 <meta property="og:site_name" content="YsBlog">
-<meta property="og:description" content="ywyself">
+<meta property="og:description" content="ArchLinux 安装，UEFI+GPT安装前设置键盘布局 可以省略，默认为us键盘布局  查看可用的键盘布局  123    # ls /usr/share/kbd/keymaps/**/*.map.gz    ```    - 设置键盘布局    # loadkeys us 1234### 验证启动方式&amp;gt; 以下命令执行成功则为uefi模式启动- 执行命令   # ls /sys/fir">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-27T09:47:42.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YsBlog">
-<meta name="twitter:description" content="ywyself">
+<meta name="twitter:description" content="ArchLinux 安装，UEFI+GPT安装前设置键盘布局 可以省略，默认为us键盘布局  查看可用的键盘布局  123    # ls /usr/share/kbd/keymaps/**/*.map.gz    ```    - 设置键盘布局    # loadkeys us 1234### 验证启动方式&amp;gt; 以下命令执行成功则为uefi模式启动- 执行命令   # ls /sys/fir">
   
     <link rel="alternate" href="/atom.xml" title="YsBlog" type="application/atom+xml">
   
@@ -68,115 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ArchLinux美化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux美化/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.972Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ArchLinux-显示优化"><a href="#ArchLinux-显示优化" class="headerlink" title="ArchLinux 显示优化"></a>ArchLinux 显示优化</h1><h2 id="修改界面为中文"><a href="#修改界面为中文" class="headerlink" title="修改界面为中文"></a>修改界面为中文</h2><p>修改<code>~/.xprofile</code>，增加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure></p>
-<h2 id="优化启动引导界面"><a href="#优化启动引导界面" class="headerlink" title="优化启动引导界面"></a>优化启动引导界面</h2><h3 id="修改grub界面的分辨率"><a href="#修改grub界面的分辨率" class="headerlink" title="修改grub界面的分辨率"></a>修改grub界面的分辨率</h3><ul>
-<li><p>编辑<code>/etc/default/grub</code>文件</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/default/grub</span><br></pre></td></tr></table></figure>
-<p>  修改 <code>GRUB_GFXMODE=auto</code> 为 <code>GRUB_GFXMODE=1440x900,1366x768,640x480</code></p>
-</li>
-<li>重新生成配置  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><h2 id="安装gtk引擎"><a href="#安装gtk引擎" class="headerlink" title="安装gtk引擎"></a>安装gtk引擎</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S gtk-engine-murrine</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S adwaita-icon-theme</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><code>`</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux美化/" data-id="cjghrye410001idsboruy5i7z" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArchLinux软件安装" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux软件安装/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.968Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ArchLinux-安装一下软件"><a href="#ArchLinux-安装一下软件" class="headerlink" title="ArchLinux 安装一下软件"></a>ArchLinux 安装一下软件</h1><h2 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu</span><br></pre></td></tr></table></figure>
-<h2 id="安装文件管理器"><a href="#安装文件管理器" class="headerlink" title="安装文件管理器"></a>安装文件管理器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S thunar</span><br></pre></td></tr></table></figure>
-<h2 id="安装chromium"><a href="#安装chromium" class="headerlink" title="安装chromium"></a>安装chromium</h2><blockquote>
-<p>其实可以直接安装chrome的，步骤多了一步，后面再说</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S chromium</span><br></pre></td></tr></table></figure>
-<h2 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h2><ul>
-<li><p>安装fcitx</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装fcitx-gtk3</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-gtk3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装fcitx-configtool</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-configtool</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装输入法</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S fcitx-libpinyin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置<code>~/.xprofile</code><br>  增加</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export GTK_IM_MODULE=fcitx</span><br><span class="line">export QT_IM_MODULE=fcitx</span><br><span class="line">export XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改<code>~/.config/openbox/autostart</code><br>  增加一行<code>fcitx &amp;</code><br>  表示<code>fcitx</code>在桌面显示后启动</p>
-</li>
-</ul>
-<h2 id="安装yaourt"><a href="#安装yaourt" class="headerlink" title="安装yaourt"></a>安装yaourt</h2><ul>
-<li><p>编辑<code>/etc/pacman.conf</code><br>文本最后加入以下内容</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装yaourt</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -Syu yaourt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装archlinuxcn的keyring</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装google-chrome"><a href="#安装google-chrome" class="headerlink" title="安装google chrome"></a>安装google chrome</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># yaourt -S google-chrome</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>启动失败</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux软件安装/" data-id="cjghrye430002idsbh3uevglh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArchLinux安装记录" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ArchLinux安装记录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/27/ArchLinux安装记录/" class="article-date">
   <time datetime="2018-04-27T09:47:42.955Z" itemprop="datePublished">2018-04-27</time>
@@ -580,227 +473,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-ArchLinux安装桌面过程记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/ArchLinux安装桌面过程记录/" class="article-date">
-  <time datetime="2018-04-27T09:47:42.948Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="给ArchLinux安装图形界面"><a href="#给ArchLinux安装图形界面" class="headerlink" title="给ArchLinux安装图形界面"></a>给ArchLinux安装图形界面</h1><blockquote>
-<p>本文档主要记录了在安装Archlinux后，给她安装图形界面<br>   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面<br>   这是说的是最精简的方式，不是最简单的方式<br>   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了<br>   最精简的方式的话，安装少量的软件，然后自己修改配置文件</p>
-</blockquote>
-<blockquote>
-<p>接下来开始本次安装图形界面的过程记录<br>  可能与实际操作有些出入，这个记录是后来写的，当时尝试过哪些方法也不记得了<br>  主要还是按照官方wiki上的方法</p>
-</blockquote>
-<h2 id="安装X服务"><a href="#安装X服务" class="headerlink" title="安装X服务"></a>安装<code>X</code>服务</h2><blockquote>
-<p>linux 下所有的图形界面绘制都由X服务来完成，拥有图形界面的程序必备（依赖）</p>
-</blockquote>
-<ul>
-<li><p>安装<code>xorg</code></p>
-<blockquote>
-<p>X.Org项目提供了 X 窗口系统的开源实现</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>默认安装了所有，不知道每个包的具体作用</p>
-</blockquote>
-</li>
-<li><p>安装驱动</p>
-<blockquote>
-<p>安装<code>xorg</code>之后应该已经安装好了驱动，这里就直接安装一次，不影响<br>  我的是intel和英伟达双显卡，这里值安装intel集显的驱动</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xf86-video-intel</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装xinit"><a href="#安装xinit" class="headerlink" title="安装xinit"></a>安装<code>xinit</code></h2><blockquote>
-<p>用这个来启动<code>xorg</code>显示服务</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xinit</span><br></pre></td></tr></table></figure>
-<h2 id="测试图形界面显示"><a href="#测试图形界面显示" class="headerlink" title="测试图形界面显示"></a>测试图形界面显示</h2><blockquote>
-<p>在安装完xorg之后就已经可以显示图形界面了<br>  可以不用测试，直接安装窗口管理器<br>  不过默认的配置有几个依赖软件包没有安装上</p>
-</blockquote>
-<h3 id="一些软件"><a href="#一些软件" class="headerlink" title="一些软件"></a>一些软件</h3><blockquote>
-<p>具体软件包的名字<code>/etc/X11/xinit/xinitrc</code></p>
-<ul>
-<li>安装twm，默认配置用的窗口管理器</li>
-<li>安装xterm，默认终端</li>
-<li>安装xclock，一个时间显示的软件</li>
-<li>运行命令<br>可能需要以root的身份运行</li>
-</ul>
-</blockquote>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># startx</span><br></pre></td></tr></table></figure>
-
-&gt; 运行后的界面是一种瓷砖窗口管理器的样式
-</code></pre><h2 id="显示管理器使用lightdm"><a href="#显示管理器使用lightdm" class="headerlink" title="显示管理器使用lightdm"></a>显示管理器使用lightdm</h2><h2 id="窗口管理器使用openbox"><a href="#窗口管理器使用openbox" class="headerlink" title="窗口管理器使用openbox"></a>窗口管理器使用openbox</h2><h1 id="虚拟机中的步骤记录"><a href="#虚拟机中的步骤记录" class="headerlink" title="虚拟机中的步骤记录"></a>虚拟机中的步骤记录</h1><h2 id="简单实现"><a href="#简单实现" class="headerlink" title="简单实现"></a>简单实现</h2><ul>
-<li><p>安装xorg</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装xinit</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xinit</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装twm</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-twm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装xterm</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xterm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装xclock</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xclock</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试界面</p>
-<blockquote>
-<p>运行命令后可以看到一个界面了</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># startx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试界面2</p>
-<blockquote>
-<p>和上面的效果一样</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># xinit /etc/X11/xinit/xinitrc</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装openbox"><a href="#安装openbox" class="headerlink" title="安装openbox"></a>安装openbox</h2><blockquote>
-<p>首先添加一个普通用户</p>
-<ul>
-<li>添加用户</li>
-</ul>
-</blockquote>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel ywyself</span><br></pre></td></tr></table></figure>
-</code></pre><ul>
-<li><p>设置密码</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd ywyself</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>openbox作为窗口管理器</p>
-</blockquote>
-<ul>
-<li><p>安装openbox</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S openbox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制openbox的配置文件到家目录</p>
-<blockquote>
-<p>这里用普通用户来操作</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp -R /etc/xdg/openbox ~/.config/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制xinit的配置到家目录</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改~/.xinitrc/xinitrc</p>
-<blockquote>
-<p>将最后的几行（从twm开始到结束）修改为</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec openbox</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行</p>
-<blockquote>
-<p>这里需要用root权限来运行</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># xinit .xinitrc/xinitrc</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这里运行后也显示了一个图形界面，不过与之前的不同，这次的窗口管理器使用的是openbox，右键里面的程序只有一个xterm能用</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="安装lightdm"><a href="#安装lightdm" class="headerlink" title="安装lightdm"></a>安装lightdm</h2><blockquote>
-<p>这个作为dm</p>
-<ul>
-<li>安装lightdm  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S lightdm</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>安装greeter（登录器）</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改greeter的配置</p>
-<blockquote>
-<p>这个可以使用<code>ls /usr/share/xgreeters</code>命令查询，这个目录下的.desktop目录都代表一个可用 greeter</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Seat:*]</span><br><span class="line">...</span><br><span class="line">greeter-session=lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>设置lightdm开机启动</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl emable lightdm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># reboot</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>在虚拟机中的测试lightdm无法启动，虚拟机中改用了sddm，可以启动</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/ArchLinux安装桌面过程记录/" data-id="cjghrye3x0000idsb35ba5p0c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/27/hello-world/" class="article-date">
-  <time datetime="2018-04-27T06:03:55.165Z" itemprop="datePublished">2018-04-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2018/04/27/ArchLinux软件安装/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          (no title)
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/27/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2018/04/27/ArchLinux安装桌面过程记录/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/27/hello-world/" data-id="cjghrye450003idsbg77ntq1f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         

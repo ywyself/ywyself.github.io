@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>YsBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="给ArchLinux安装图形界面 本文档主要记录了在安装Archlinux后，给她安装图形界面   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面   这是说的是最精简的方式，不是最简单的方式   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了   最精简的方式的话，安装少量的软件，然后自己修改配置文件   接下来开始本次安装图形界面的">
+<meta name="keywords" content="ywyself">
+<meta property="og:type" content="article">
+<meta property="og:title" content="YsBlog">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/ArchLinux安装桌面过程记录/index.html">
+<meta property="og:site_name" content="YsBlog">
+<meta property="og:description" content="给ArchLinux安装图形界面 本文档主要记录了在安装Archlinux后，给她安装图形界面   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面   这是说的是最精简的方式，不是最简单的方式   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了   最精简的方式的话，安装少量的软件，然后自己修改配置文件   接下来开始本次安装图形界面的">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-27T09:47:42.948Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YsBlog">
+<meta name="twitter:description" content="给ArchLinux安装图形界面 本文档主要记录了在安装Archlinux后，给她安装图形界面   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面   这是说的是最精简的方式，不是最简单的方式   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了   最精简的方式的话，安装少量的软件，然后自己修改配置文件   接下来开始本次安装图形界面的">
+  
+    <link rel="alternate" href="/atom.xml" title="YsBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YsBlog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ywyself</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ArchLinux安装桌面过程记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/27/ArchLinux安装桌面过程记录/" class="article-date">
+  <time datetime="2018-04-27T09:47:42.948Z" itemprop="datePublished">2018-04-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="给ArchLinux安装图形界面"><a href="#给ArchLinux安装图形界面" class="headerlink" title="给ArchLinux安装图形界面"></a>给ArchLinux安装图形界面</h1><blockquote>
+<p>本文档主要记录了在安装Archlinux后，给她安装图形界面<br>   图形界面并非安装桌面集成环境，而是使用最精简的方式让她显示一个图形界面<br>   这是说的是最精简的方式，不是最简单的方式<br>   最简单的方式可以安装一个xfce和sddm，设置sddm开机启动就可以看到图形界面了<br>   最精简的方式的话，安装少量的软件，然后自己修改配置文件</p>
+</blockquote>
+<blockquote>
+<p>接下来开始本次安装图形界面的过程记录<br>  可能与实际操作有些出入，这个记录是后来写的，当时尝试过哪些方法也不记得了<br>  主要还是按照官方wiki上的方法</p>
+</blockquote>
+<h2 id="安装X服务"><a href="#安装X服务" class="headerlink" title="安装X服务"></a>安装<code>X</code>服务</h2><blockquote>
+<p>linux 下所有的图形界面绘制都由X服务来完成，拥有图形界面的程序必备（依赖）</p>
+</blockquote>
+<ul>
+<li><p>安装<code>xorg</code></p>
+<blockquote>
+<p>X.Org项目提供了 X 窗口系统的开源实现</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认安装了所有，不知道每个包的具体作用</p>
+</blockquote>
+</li>
+<li><p>安装驱动</p>
+<blockquote>
+<p>安装<code>xorg</code>之后应该已经安装好了驱动，这里就直接安装一次，不影响<br>  我的是intel和英伟达双显卡，这里值安装intel集显的驱动</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xf86-video-intel</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="安装xinit"><a href="#安装xinit" class="headerlink" title="安装xinit"></a>安装<code>xinit</code></h2><blockquote>
+<p>用这个来启动<code>xorg</code>显示服务</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xinit</span><br></pre></td></tr></table></figure>
+<h2 id="测试图形界面显示"><a href="#测试图形界面显示" class="headerlink" title="测试图形界面显示"></a>测试图形界面显示</h2><blockquote>
+<p>在安装完xorg之后就已经可以显示图形界面了<br>  可以不用测试，直接安装窗口管理器<br>  不过默认的配置有几个依赖软件包没有安装上</p>
+</blockquote>
+<h3 id="一些软件"><a href="#一些软件" class="headerlink" title="一些软件"></a>一些软件</h3><blockquote>
+<p>具体软件包的名字<code>/etc/X11/xinit/xinitrc</code></p>
+<ul>
+<li>安装twm，默认配置用的窗口管理器</li>
+<li>安装xterm，默认终端</li>
+<li>安装xclock，一个时间显示的软件</li>
+<li>运行命令<br>可能需要以root的身份运行</li>
+</ul>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># startx</span><br></pre></td></tr></table></figure>
+
+&gt; 运行后的界面是一种瓷砖窗口管理器的样式
+</code></pre><h2 id="显示管理器使用lightdm"><a href="#显示管理器使用lightdm" class="headerlink" title="显示管理器使用lightdm"></a>显示管理器使用lightdm</h2><h2 id="窗口管理器使用openbox"><a href="#窗口管理器使用openbox" class="headerlink" title="窗口管理器使用openbox"></a>窗口管理器使用openbox</h2><h1 id="虚拟机中的步骤记录"><a href="#虚拟机中的步骤记录" class="headerlink" title="虚拟机中的步骤记录"></a>虚拟机中的步骤记录</h1><h2 id="简单实现"><a href="#简单实现" class="headerlink" title="简单实现"></a>简单实现</h2><ul>
+<li><p>安装xorg</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装xinit</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xinit</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装twm</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-twm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装xterm</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xterm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装xclock</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S xorg-xclock</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试界面</p>
+<blockquote>
+<p>运行命令后可以看到一个界面了</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># startx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试界面2</p>
+<blockquote>
+<p>和上面的效果一样</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># xinit /etc/X11/xinit/xinitrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="安装openbox"><a href="#安装openbox" class="headerlink" title="安装openbox"></a>安装openbox</h2><blockquote>
+<p>首先添加一个普通用户</p>
+<ul>
+<li>添加用户</li>
+</ul>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel ywyself</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>设置密码</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># passwd ywyself</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>openbox作为窗口管理器</p>
+</blockquote>
+<ul>
+<li><p>安装openbox</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S openbox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制openbox的配置文件到家目录</p>
+<blockquote>
+<p>这里用普通用户来操作</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp -R /etc/xdg/openbox ~/.config/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制xinit的配置到家目录</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp /etc/X11/xinit/xinitrc ~/.xinitrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改~/.xinitrc/xinitrc</p>
+<blockquote>
+<p>将最后的几行（从twm开始到结束）修改为</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec openbox</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行</p>
+<blockquote>
+<p>这里需要用root权限来运行</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># xinit .xinitrc/xinitrc</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里运行后也显示了一个图形界面，不过与之前的不同，这次的窗口管理器使用的是openbox，右键里面的程序只有一个xterm能用</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="安装lightdm"><a href="#安装lightdm" class="headerlink" title="安装lightdm"></a>安装lightdm</h2><blockquote>
+<p>这个作为dm</p>
+<ul>
+<li>安装lightdm  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S lightdm</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>安装greeter（登录器）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># pacman -S lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改greeter的配置</p>
+<blockquote>
+<p>这个可以使用<code>ls /usr/share/xgreeters</code>命令查询，这个目录下的.desktop目录都代表一个可用 greeter</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Seat:*]</span><br><span class="line">...</span><br><span class="line">greeter-session=lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>设置lightdm开机启动</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl emable lightdm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># reboot</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>在虚拟机中的测试lightdm无法启动，虚拟机中改用了sddm，可以启动</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/27/ArchLinux安装桌面过程记录/" data-id="cjghrye3x0000idsb35ba5p0c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/27/ArchLinux安装记录/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux美化/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux软件安装/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux安装记录/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/ArchLinux安装桌面过程记录/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ywyself<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
